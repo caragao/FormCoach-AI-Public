@@ -1,18 +1,15 @@
-# FormCoach-AI-Public
+# KineCount Public Support Site
 
-This repository hosts public support and privacy pages for KineCount (and the legacy FormCoach AI beta), used as the Privacy Policy URL for App Store Connect and public support review.
+This repository hosts the public support and privacy pages for KineCount, an iPhone-first, camera-based workout counter by Camca AI.
 
-## KineCount Privacy Policy URL
+The repository name still contains `FormCoach-AI-Public` for historical reasons, but the public-facing app brand is **KineCount**.
 
-Expected GitHub Pages URL:
+## Public URLs
 
-`https://caragao.github.io/FormCoach-AI-Public/privacy.html`
+- Support URL: `https://caragao.github.io/FormCoach-AI-Public/`
+- Privacy Policy URL: `https://caragao.github.io/FormCoach-AI-Public/privacy.html`
 
-Use this URL in App Store Connect App Privacy metadata for both English (U.S.) and Portuguese (Brazil).
-
-## FormCoach AI (legacy beta) Privacy Policy URL
-
-`https://caragao.github.io/FormCoach-AI-Public/privacy-policy.html`
+Use these in App Store Connect for both English (U.S.) and Portuguese (Brazil).
 
 ## GitHub Pages setup
 
@@ -25,7 +22,7 @@ Settings → Pages → Deploy from branch → main → root.
 5. Select folder **/root**.
 6. Save.
 7. Wait for publication.
-8. Copy the published `privacy.html` URL into App Store Connect.
+8. Verify `index.html` and `privacy.html` are reachable at the URLs above.
 
 ## Repository scope
 
