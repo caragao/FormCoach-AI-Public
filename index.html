@@ -1,168 +1,161 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KineCount Support</title>
   <style>
-    :root {
-      color-scheme: light;
-    }
+    *, *::before, *::after { box-sizing: border-box; }
     body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 17px;
       line-height: 1.6;
-      color: #1f2937;
-      background: #f9fafb;
-    }
-    main {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 1.5rem 1rem 2rem;
-    }
-    header.hero {
+      color: #1c1c1e;
       background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 14px;
-      padding: 1.5rem 1.25rem;
-      margin-bottom: 1rem;
+      margin: 0;
+      padding: 0;
     }
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+    nav {
+      margin-bottom: 40px;
+      font-size: 15px;
+    }
+    nav a {
+      color: #007aff;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+    nav a:hover { text-decoration: underline; }
     h1 {
-      margin: 0 0 0.25rem;
-      font-size: 2rem;
-      color: #111827;
+      font-size: 34px;
+      font-weight: 700;
+      margin: 0 0 6px;
+      letter-spacing: -0.5px;
     }
     .tagline {
-      margin: 0 0 0.75rem;
-      color: #374151;
-      font-size: 1.05rem;
-    }
-    .lede {
-      margin: 0;
-      color: #4b5563;
-    }
-    section.card {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      padding: 1rem 1.25rem;
-      margin: 1rem 0;
+      font-size: 19px;
+      color: #636366;
+      margin: 0 0 40px;
     }
     h2 {
-      margin-top: 0.25rem;
-      margin-bottom: 0.5rem;
-      font-size: 1.15rem;
-      color: #111827;
+      font-size: 22px;
+      font-weight: 600;
+      margin: 40px 0 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #e5e5ea;
     }
-    p, li {
-      margin: 0.45rem 0;
-    }
+    p { margin: 0 0 14px; }
     ul {
-      padding-left: 1.2rem;
-      margin: 0.4rem 0;
+      margin: 0 0 14px;
+      padding-left: 22px;
     }
-    a {
-      color: #0f766e;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    a:hover,
-    a:focus {
-      text-decoration: underline;
-    }
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-top: 0.5rem;
-    }
-    .btn {
-      display: inline-block;
-      background: #0f766e;
-      color: #ffffff;
-      padding: 0.55rem 0.95rem;
-      border-radius: 8px;
-      font-weight: 600;
-    }
-    .btn:hover,
-    .btn:focus {
-      background: #0b5e57;
-      text-decoration: none;
+    li { margin-bottom: 6px; }
+    a { color: #007aff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .contact-block {
+      background: #f2f2f7;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 12px 0;
     }
     footer {
-      text-align: center;
-      color: #6b7280;
-      font-size: 0.9rem;
-      padding: 1.5rem 1rem 2rem;
+      margin-top: 64px;
+      font-size: 13px;
+      color: #8e8e93;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { background: #000000; color: #f2f2f7; }
+      h2 { border-bottom-color: #3a3a3c; }
+      .contact-block { background: #1c1c1e; }
+      nav a, a { color: #0a84ff; }
     }
   </style>
 </head>
 <body>
-  <main>
-    <header class="hero">
-      <h1>KineCount</h1>
-      <p class="tagline">Simple camera-based workout tracking for iPhone.</p>
-      <p class="lede">KineCount helps you count Squats, Push-ups, and Plank hold time using your iPhone camera. The app is designed for short home workout sessions and stores workout information locally on your device.</p>
-      <div class="actions">
-        <a class="btn" href="privacy.html">Privacy Policy</a>
-        <a class="btn" href="mailto:camcaep@gmail.com">Contact Support</a>
-      </div>
-    </header>
+<div class="container">
 
-    <section class="card">
-      <h2>What KineCount does</h2>
-      <ul>
-        <li>Counts Squats and Push-ups using on-device camera-based pose detection.</li>
-        <li>Tracks Plank valid hold time.</li>
-        <li>Shows local workout history, weekly progress, streaks, all-time local totals, and earned minutes.</li>
-        <li>Lets users optionally spend earned workout minutes to temporarily unlock selected apps through App Limits.</li>
-      </ul>
-    </section>
+  <nav>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="mailto:support@camca-ai.com">Contact Support</a>
+  </nav>
 
-    <section class="card">
-      <h2>Privacy-first design</h2>
-      <ul>
-        <li>No account required.</li>
-        <li>No backend.</li>
-        <li>No cloud sync.</li>
-        <li>No analytics.</li>
-        <li>No ads.</li>
-        <li>No payments.</li>
-        <li>No social features.</li>
-        <li>No Apple Health integration.</li>
-        <li>No video, image, camera frame, or pose signal upload.</li>
-        <li>Camera processing runs on-device.</li>
-        <li>App Limits does not read app usage data.</li>
-      </ul>
-    </section>
+  <h1>KineCount</h1>
+  <p class="tagline">Camera-based workout tracking for iPhone.</p>
 
-    <section class="card">
-      <h2>App Limits</h2>
-      <p>KineCount may request Screen Time access so the user can select apps and use the optional App Limits feature. The user selects individual apps, earns minutes through workout sessions, and can spend those minutes to temporarily unlock the selected apps.</p>
-      <p>Category-only blocking is not supported in the current version. KineCount does not know which apps the user actually opens, when, or for how long.</p>
-    </section>
+  <h2>What KineCount does</h2>
+  <ul>
+    <li>Counts Squats, Push-ups, and Sit-ups using on-device camera-based pose detection.</li>
+    <li>Tracks Plank valid hold time.</li>
+    <li>Shows local workout history, weekly progress, streaks, all-time local totals, and a Today card.</li>
+    <li>Estimates calories based on reps, hold time, and local profile.</li>
+    <li>Tracks earned minutes &mdash; minutes unlocked by completing workout sessions.</li>
+    <li>Optional leaderboard: share your weekly Push-up count and 5 Star Road progress with a public nickname (entirely opt-in).</li>
+    <li>Optional cloud sync: keep your workout history, profile, and progress in sync across device reinstalls (opt-in, Sign in with Apple required).</li>
+    <li>Optional App Limits: spend earned minutes to temporarily unlock selected apps through Screen Time access (opt-in).</li>
+  </ul>
 
-    <section class="card">
-      <h2>Important limitations</h2>
-      <ul>
-        <li>KineCount is informational only.</li>
-        <li>Counts, hold time, and estimated calories are camera-based estimates and may be imperfect.</li>
-        <li>Lighting, framing, clothing, body position, and iPhone placement may affect results.</li>
-        <li>KineCount does not provide medical advice, injury prevention, diagnosis, physiotherapy, rehabilitation, form correction, coaching, scoring, clinical analysis, biomechanical analysis, or treatment guidance.</li>
-      </ul>
-    </section>
+  <h2>Privacy by default</h2>
+  <p>
+    The core workout experience works entirely on-device with no account required.
+    Camera frames and pose landmarks are processed on-device and discarded immediately &mdash; nothing is ever stored or transmitted.
+  </p>
+  <p>
+    Optional features (cloud sync, leaderboard, App Limits) are explicit opt-in. None are enabled by default.
+    KineCount has no analytics, no ads, no payments, and no Apple Health integration.
+  </p>
 
-    <section class="card">
-      <h2>Support contact</h2>
-      <p>Email: <a href="mailto:camcaep@gmail.com">camcaep@gmail.com</a></p>
-    </section>
+  <h2>Optional features</h2>
+  <p><strong>Leaderboard (opt-in)</strong><br>
+  Share your weekly Push-up count and 5 Star Road progress with a public nickname you choose.
+  Sign in with Apple is required &mdash; zero scopes are requested (no email or real name accessed).
+  Only your public nickname and aggregate score are visible to other users.
+  Body metrics and all other personal data are never on the leaderboard.
+  You can leave the leaderboard and delete your account at any time.</p>
 
-    <section class="card">
-      <h2>Privacy</h2>
-      <p>Read the full <a href="privacy.html">Privacy Policy</a> (English and Português).</p>
-    </section>
+  <p><strong>Cloud sync (opt-in)</strong><br>
+  Keeps your workout history, profile, and progress synced to your own account in the developer&rsquo;s secure infrastructure.
+  Your data is protected by row-level security &mdash; you can only access your own data.
+  Sign in with Apple is required. Camera frames, pose landmarks, Screen Time data, and app selection are never synced.</p>
 
-    <footer>&copy; 2026 Camca AI. All rights reserved.</footer>
-  </main>
+  <p><strong>App Limits (opt-in)</strong><br>
+  Spend earned workout minutes to temporarily unlock selected apps through Screen Time access.
+  See the section below for full details.</p>
+
+  <h2>App Limits</h2>
+  <p>
+    KineCount may request Screen Time access so the user can select apps and use the optional App Limits feature.
+    The user selects individual apps, earns minutes through workout sessions, and can spend those minutes to temporarily unlock the selected apps.
+  </p>
+  <p>
+    Category-only blocking is not supported in the current version.
+    KineCount does not know which apps the user actually opens, when, or for how long.
+    The app selection is stored locally on the device only and is never transmitted.
+  </p>
+
+  <h2>Important limitations</h2>
+  <ul>
+    <li>KineCount is informational only.</li>
+    <li>Counts, hold time, and estimated calories are camera-based estimates and may be imperfect.</li>
+    <li>Lighting, framing, clothing, body position, and iPhone placement may affect results.</li>
+    <li>KineCount does not provide medical advice, injury prevention, diagnosis, physiotherapy, rehabilitation, form correction, coaching, scoring, clinical analysis, biomechanical analysis, or treatment guidance.</li>
+  </ul>
+
+  <h2>Support contact</h2>
+  <div class="contact-block">
+    Email: <a href="mailto:support@camca-ai.com">support@camca-ai.com</a>
+  </div>
+
+  <h2>Privacy</h2>
+  <p>Read the full <a href="privacy.html">Privacy Policy</a> (English and Portugu&ecirc;s).</p>
+
+  <footer>
+    &copy; 2026 Camca AI. All rights reserved.
+  </footer>
+
+</div>
 </body>
 </html>

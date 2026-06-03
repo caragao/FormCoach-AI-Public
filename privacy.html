@@ -1,252 +1,327 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KineCount Privacy Policy</title>
   <style>
-    :root {
-      color-scheme: light;
-    }
+    *, *::before, *::after { box-sizing: border-box; }
     body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.65;
-      color: #1f2937;
-      background: #f9fafb;
-    }
-    main {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 1.5rem 1rem 3rem;
-    }
-    article {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      color: #1c1c1e;
       background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      padding: 1.25rem 1.5rem;
+      margin: 0;
+      padding: 0;
     }
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+    nav {
+      margin-bottom: 40px;
+      font-size: 15px;
+    }
+    nav a {
+      color: #007aff;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+    nav a:hover { text-decoration: underline; }
     h1 {
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-      font-size: 1.8rem;
-      color: #111827;
+      font-size: 34px;
+      font-weight: 700;
+      margin: 0 0 6px;
+      letter-spacing: -0.5px;
     }
     h2 {
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
-      font-size: 1.25rem;
-      color: #111827;
+      font-size: 22px;
+      font-weight: 600;
+      margin: 40px 0 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #e5e5ea;
     }
     h3 {
-      margin-top: 1.2rem;
-      margin-bottom: 0.4rem;
-      font-size: 1.05rem;
-      color: #111827;
-    }
-    p, li {
-      margin: 0.5rem 0;
-    }
-    ul {
-      padding-left: 1.2rem;
-      margin: 0.4rem 0;
-    }
-    a {
-      color: #0f766e;
-      text-decoration: none;
+      font-size: 18px;
       font-weight: 600;
+      margin: 28px 0 10px;
     }
-    a:hover,
-    a:focus {
-      text-decoration: underline;
+    p { margin: 0 0 14px; }
+    ul {
+      margin: 0 0 14px;
+      padding-left: 22px;
     }
-    .toc {
-      margin: 0.5rem 0 1.25rem;
-      font-size: 0.95rem;
+    li { margin-bottom: 6px; }
+    a { color: #007aff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .last-updated {
+      color: #636366;
+      font-size: 15px;
+      margin-bottom: 28px;
     }
-    .toc a {
-      margin-right: 0.75rem;
-    }
-    hr {
+    .section-divider {
       border: none;
-      border-top: 1px solid #e5e7eb;
-      margin: 2rem 0;
+      border-top: 2px solid #e5e5ea;
+      margin: 64px 0 40px;
     }
+    .lang-anchor { display: block; }
     footer {
-      text-align: center;
-      color: #6b7280;
-      font-size: 0.9rem;
-      padding: 1.5rem 1rem 2rem;
+      margin-top: 64px;
+      font-size: 13px;
+      color: #8e8e93;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { background: #000000; color: #f2f2f7; }
+      h2 { border-bottom-color: #3a3a3c; }
+      .section-divider { border-top-color: #3a3a3c; }
+      nav a, a { color: #0a84ff; }
     }
   </style>
 </head>
 <body>
-  <main>
-    <article>
-      <h1>KineCount Privacy Policy</h1>
-      <p class="toc">
-        <a href="index.html">&larr; Support</a>
-        <a href="#english">English</a>
-        <a href="#portugues">Português</a>
-      </p>
+<div class="container">
 
-      <section id="english">
-        <h2>KineCount Privacy Policy</h2>
-        <p><strong>Last updated:</strong> May 19, 2026</p>
-        <p>This Privacy Policy explains how KineCount handles information when you use the app.</p>
+  <nav>
+    <a href="index.html">&larr; Support</a>
+    <a href="#english">English</a>
+    <a href="#portugues">Portugu&ecirc;s</a>
+  </nav>
 
-        <h3>1. Overview</h3>
-        <p>KineCount is an informational iPhone app that helps users count squats, push-ups, and plank valid hold time using the device camera.</p>
-        <p>KineCount is designed with a local-first, privacy-by-default approach.</p>
-        <p>KineCount does not require an account, does not have a backend, does not use cloud sync, does not use analytics, does not show ads, does not include payments, does not include social features, and does not integrate with Apple Health.</p>
+  <!-- ═══════════════════════════════════════════════════════ ENGLISH -->
+  <span class="lang-anchor" id="english"></span>
+  <h1>KineCount Privacy Policy</h1>
+  <p class="last-updated"><strong>Last updated:</strong> June 1, 2026</p>
 
-        <h3>2. Data Collected</h3>
-        <p>KineCount does not collect personal data from users to external servers.</p>
-        <p>The app does not send videos, images, camera frames, pose signals, workout history, preferences, app usage data, location data, contacts, advertising identifiers, or personal information to the developer&rsquo;s servers.</p>
+  <p>This Privacy Policy explains how KineCount handles information when you use the app.</p>
 
-        <h3>3. Data Stored Locally on the Device</h3>
-        <p>KineCount may store information locally on your iPhone that is necessary for the app to function, including:</p>
-        <ul>
-          <li>workout sessions;</li>
-          <li>repetition counts;</li>
-          <li>plank valid hold time;</li>
-          <li>estimated calories;</li>
-          <li>local history;</li>
-          <li>local goals;</li>
-          <li>local streaks;</li>
-          <li>earned minutes;</li>
-          <li>local spendable minute balance;</li>
-          <li>local app preferences;</li>
-          <li>local app selection for the App Limits feature.</li>
-        </ul>
-        <p>This data stays on the user&rsquo;s device. Because KineCount does not have an account system, backend, or cloud sync, this data is not sent to the developer.</p>
+  <h3>1. Overview</h3>
+  <p>
+    KineCount is an informational iPhone app that helps users count Squats, Push-ups, Sit-ups, and Plank valid hold time using the device camera.
+  </p>
+  <p>
+    KineCount is designed with a local-first, privacy-by-default approach. Core features work entirely without an account. Optional cloud sync and an optional leaderboard are available as explicit opt-in features and require Sign in with Apple.
+  </p>
 
-        <h3>4. Camera and On-Device Processing</h3>
-        <p>KineCount uses the iPhone camera to count supported exercises.</p>
-        <p>Camera processing runs on-device. KineCount does not upload images, videos, camera frames, or pose signals to external servers.</p>
-        <p>Camera permission is used only to enable camera-based workout sessions.</p>
+  <h3>2. Data Collected</h3>
+  <p><strong>Without optional features (default):</strong> KineCount does not collect personal data from users to external servers. All data stays on-device.</p>
+  <p><strong>With optional cloud sync and/or leaderboard enabled (opt-in):</strong> the following data may be transmitted to the developer&rsquo;s secure, Supabase-backed infrastructure:</p>
+  <ul>
+    <li>Workout session data (exercise type, reps, duration, estimated calories, timestamps).</li>
+    <li>Profile data (age, sex, height, weight). Body fat percentage is optional, user-clearable, never public, and never included on the leaderboard.</li>
+    <li>Spend-ledger events (opaque charged/refunded minutes and timestamps &mdash; never contains app names, bundle IDs, or Screen Time usage data).</li>
+    <li>5 Star Road progress and 30-Day Challenge state.</li>
+    <li>Public nickname and leaderboard score (weekly Push-ups, 5 Star Road) &mdash; leaderboard only.</li>
+    <li>Supabase Auth user identifier (internal only, never shown in the UI) &mdash; leaderboard and/or cloud sync only.</li>
+  </ul>
 
-        <h3>5. App Limits and Screen Time Access</h3>
-        <p>KineCount may request Screen Time access to let the user select apps and use the optional App Limits feature.</p>
-        <p>This feature allows the user to choose specific apps, earn minutes by completing workout sessions, and spend those minutes to temporarily unlock the selected apps.</p>
-        <p>KineCount does not read app usage data. KineCount does not know which apps the user actually opened, when, or for how long.</p>
-        <p>KineCount does not use the App and Website Usage entitlement, DeviceActivityEvent, ShieldActionExtension, or ShieldConfigurationExtension.</p>
-        <p>The app selection is handled locally on the device. KineCount does not expose app names, bundle IDs, domains, category names, or raw selection data in user interface, logs, errors, or documentation.</p>
+  <h3>3. Data NOT Collected (in any configuration)</h3>
+  <ul>
+    <li>Camera frames, images, videos, or pose landmarks &mdash; processed on-device, discarded immediately, never stored or transmitted.</li>
+    <li>Email address or real name.</li>
+    <li>Phone number, postal address, or location data.</li>
+    <li>Device or advertising identifiers.</li>
+    <li>Apple Health data.</li>
+    <li>App names, bundle IDs, domains, or Screen Time / usage data.</li>
+    <li>FamilyActivitySelection token &mdash; stored locally on-device only, never transmitted.</li>
+  </ul>
 
-        <h3>6. Data Sharing</h3>
-        <p>KineCount does not sell personal data.</p>
-        <p>KineCount does not share personal data with advertisers, ad networks, analytics providers, data brokers, or third parties for tracking.</p>
-        <p>Because the app does not have a backend, account system, cloud sync, analytics, or advertising, the developer does not receive personal app usage data.</p>
+  <h3>4. Data Stored Locally on the Device</h3>
+  <p>KineCount may store the following information locally on your iPhone:</p>
+  <ul>
+    <li>Workout sessions, repetition counts, Plank valid hold time, estimated calories.</li>
+    <li>Local workout history, goals, streaks, and all-time totals.</li>
+    <li>Earned minutes and local spendable minute balance.</li>
+    <li>App preferences.</li>
+    <li>App Limits selection (opaque token &mdash; app names and bundle IDs are never accessible to KineCount).</li>
+  </ul>
+  <p>Local data stays on the user&rsquo;s device. If optional cloud sync is not enabled, it is never sent to the developer.</p>
 
-        <h3>7. Data Retention and Deletion</h3>
-        <p>Local data remains on the device while the app is installed or until it is deleted by the user, subject to the app features and iOS settings available to the user.</p>
-        <p>Users may delete local data by deleting the app from their device.</p>
-        <p>Because KineCount does not have an account system, backend, or cloud sync, the developer does not keep a remote copy of user data.</p>
+  <h3>5. Camera and On-Device Processing</h3>
+  <p>KineCount uses the iPhone camera to count supported exercises.</p>
+  <p>Camera processing runs entirely on-device. KineCount does not upload images, videos, camera frames, or pose landmarks to external servers.</p>
+  <p>Camera permission is used only to enable camera-based workout sessions.</p>
 
-        <h3>8. Revoking Permissions</h3>
-        <p>Users can revoke KineCount permissions at any time in iOS Settings, including:</p>
-        <ul>
-          <li>camera access;</li>
-          <li>Screen Time access, where applicable.</li>
-        </ul>
-        <p>Revoking permissions may limit or prevent features that depend on those permissions from working.</p>
+  <h3>6. App Limits and Screen Time Access</h3>
+  <p>KineCount may request Screen Time access to let the user select apps and use the optional App Limits feature.</p>
+  <p>This feature allows the user to choose specific apps, earn minutes by completing workout sessions, and spend those minutes to temporarily unlock the selected apps.</p>
+  <p>KineCount does not read app usage data. KineCount does not know which apps the user actually opened, when, or for how long.</p>
+  <p>KineCount does not use the App and Website Usage entitlement, DeviceActivityEvent, ShieldActionExtension, or ShieldConfigurationExtension.</p>
+  <p>The app selection is handled and stored locally on the device. KineCount does not expose app names, bundle IDs, domains, category names, or raw selection data in user interface, logs, errors, or documentation. The app selection token is never transmitted to the developer.</p>
 
-        <h3>9. Children</h3>
-        <p>KineCount is not specifically directed to children and does not knowingly collect personal data from children.</p>
+  <h3>7. Optional Cloud Sync</h3>
+  <p>When the user enables cloud sync via Sign in with Apple, workout data syncs to the user&rsquo;s own account in the developer&rsquo;s Supabase-backed infrastructure. Data is protected by row-level security &mdash; each user can only access their own data.</p>
+  <p><strong>What IS synced:</strong> workout history, profile, spend-ledger events (opaque minutes only), 5 Star Road progress, and 30-Day Challenge state.</p>
+  <p><strong>What is NEVER synced:</strong> camera frames, pose landmarks, FamilyActivitySelection token, Screen Time data, app names or bundle IDs, Apple Health data.</p>
 
-        <h3>10. Health, Exercise, and Limitations</h3>
-        <p>KineCount is informational only.</p>
-        <p>Counts, valid hold time, and estimated calories are camera-based estimates and may be imperfect. Lighting, framing, body position, clothing, and iPhone placement may affect results.</p>
-        <p>KineCount does not provide medical advice, injury prevention, diagnosis, physiotherapy, rehabilitation, form correction, coaching, scoring, clinical analysis, biomechanical analysis, or treatment guidance.</p>
+  <h3>8. Optional Leaderboard</h3>
+  <p>The leaderboard is entirely opt-in. It uses Sign in with Apple with zero scopes &mdash; no email address or real name is requested or accessed.</p>
+  <p>The user chooses a public nickname. Only the public nickname and aggregate score (weekly Push-ups, 5 Star Road) are visible to other users.</p>
+  <p>No body metrics, no camera data, no Screen Time data, and no device identifiers are ever on the leaderboard.</p>
 
-        <h3>11. Changes to This Policy</h3>
-        <p>This Privacy Policy may be updated from time to time. The latest version will be made available on this page.</p>
+  <h3>9. Account Creation and Deletion</h3>
+  <p>Accounts are created when the user signs in with Apple to enable cloud sync and/or the leaderboard.</p>
+  <p>In-app account deletion is available at <strong>Profile &rarr; Account &rarr; Delete account</strong>. Deletion is immediate and cascading &mdash; all server-side data linked to the account is deleted, including archived workout sessions, with no exceptions. Best-effort Apple token revocation is performed. Local data is cleared immediately.</p>
+  <p>Users can also revoke Sign in with Apple access at any time in iOS Settings &rarr; Apple ID &rarr; Password &amp; Security &rarr; Apps Using Apple ID.</p>
 
-        <h3>12. Contact</h3>
-        <p>For questions about this Privacy Policy or KineCount, contact:</p>
-        <p>Email: camcaep@gmail.com<br>Developer: Camca AI</p>
-      </section>
+  <h3>10. Data Sharing</h3>
+  <p>KineCount does not sell personal data.</p>
+  <p>KineCount does not share personal data with advertisers, ad networks, analytics providers, data brokers, or third parties for tracking purposes.</p>
+  <p>Data synced to the developer&rsquo;s infrastructure is the user&rsquo;s own data, protected by row-level security and used solely to provide the cloud sync and leaderboard features.</p>
 
-      <hr>
+  <h3>11. Data Retention</h3>
+  <p><strong>Local data:</strong> stays on the device until the app is deleted or the user clears it.</p>
+  <p><strong>Cloud data &mdash; workout sessions:</strong> subject to a 24-month archive policy (moved to an archive table after 24 months; not hard-deleted until account deletion).</p>
+  <p><strong>All other cloud tables:</strong> no automatic retention limit currently. Data is retained until account deletion.</p>
+  <p><strong>Account deletion:</strong> immediately and permanently removes all server-side data linked to the account, including the archive table, with no exceptions.</p>
 
-      <section id="portugues">
-        <h2>Política de Privacidade do KineCount</h2>
-        <p><strong>Última atualização:</strong> 19 de maio de 2026</p>
-        <p>Esta Política de Privacidade explica como o KineCount trata informações quando você usa o aplicativo.</p>
+  <h3>12. Revoking Permissions</h3>
+  <p>Users can revoke KineCount permissions at any time in iOS Settings, including:</p>
+  <ul>
+    <li>Camera access.</li>
+    <li>Screen Time access, where applicable.</li>
+  </ul>
+  <p>Revoking permissions may limit or prevent features that depend on those permissions from working.</p>
 
-        <h3>1. Visão geral</h3>
-        <p>KineCount é um aplicativo informacional para iPhone que ajuda o usuário a contar agachamentos, flexões e tempo válido de prancha usando a câmera do aparelho.</p>
-        <p>KineCount foi desenvolvido com uma abordagem local-first e de privacidade por padrão.</p>
-        <p>O KineCount não exige conta, não possui backend, não possui sincronização em nuvem, não possui analytics, não possui publicidade, não possui pagamentos, não possui recursos sociais e não integra com Apple Health.</p>
+  <h3>13. Children</h3>
+  <p>KineCount is not specifically directed to children and does not knowingly collect personal data from children.</p>
 
-        <h3>2. Dados coletados</h3>
-        <p>KineCount não coleta dados pessoais do usuário para servidores externos.</p>
-        <p>O aplicativo não envia vídeos, imagens, frames de câmera, sinais de pose, histórico de treinos, preferências, dados de uso de apps, dados de localização, contatos, identificadores de publicidade ou informações pessoais para servidores do desenvolvedor.</p>
+  <h3>14. Health, Exercise, and Limitations</h3>
+  <p>KineCount is informational only.</p>
+  <p>Counts, valid hold time, and estimated calories are camera-based estimates and may be imperfect. Lighting, framing, body position, clothing, and iPhone placement may affect results.</p>
+  <p>KineCount does not provide medical advice, injury prevention, diagnosis, physiotherapy, rehabilitation, form correction, coaching, scoring, clinical analysis, biomechanical analysis, or treatment guidance.</p>
 
-        <h3>3. Dados armazenados localmente no aparelho</h3>
-        <p>KineCount pode armazenar localmente no seu iPhone informações necessárias para o funcionamento do aplicativo, incluindo:</p>
-        <ul>
-          <li>sessões de treino;</li>
-          <li>contagens de repetições;</li>
-          <li>tempo válido de prancha;</li>
-          <li>estimativas de calorias;</li>
-          <li>histórico local;</li>
-          <li>metas locais;</li>
-          <li>sequências locais;</li>
-          <li>minutos ganhos;</li>
-          <li>saldo local de minutos disponíveis;</li>
-          <li>preferências locais do aplicativo;</li>
-          <li>seleção local de apps para o recurso Limites de apps.</li>
-        </ul>
-        <p>Esses dados ficam no aparelho do usuário. Como o KineCount não possui conta, backend ou sincronização em nuvem, esses dados não são enviados para o desenvolvedor.</p>
+  <h3>15. Changes to This Policy</h3>
+  <p>This Privacy Policy may be updated from time to time. The latest version will be made available on this page.</p>
 
-        <h3>4. Câmera e processamento no aparelho</h3>
-        <p>KineCount usa a câmera do iPhone para contar exercícios compatíveis.</p>
-        <p>O processamento da câmera ocorre no próprio aparelho. KineCount não envia imagens, vídeos, frames de câmera ou sinais de pose para servidores externos.</p>
-        <p>A permissão de câmera é usada apenas para permitir o funcionamento das sessões de treino baseadas em câmera.</p>
+  <h3>16. Contact</h3>
+  <p>
+    For questions about this Privacy Policy or KineCount, contact:<br>
+    Email: <a href="mailto:support@camca-ai.com">support@camca-ai.com</a><br>
+    Developer: Camca AI
+  </p>
 
-        <h3>5. Limites de apps e acesso ao Tempo de Uso</h3>
-        <p>KineCount pode solicitar acesso ao Tempo de Uso para permitir que o usuário selecione apps e use o recurso opcional Limites de apps.</p>
-        <p>Esse recurso permite que o usuário escolha apps específicos, ganhe minutos ao completar sessões de treino e use esses minutos para liberar temporariamente os apps selecionados.</p>
-        <p>KineCount não lê dados de uso de apps. KineCount não sabe quais apps o usuário realmente abriu, quando abriu ou por quanto tempo usou.</p>
-        <p>KineCount não usa o entitlement App and Website Usage, não usa DeviceActivityEvent, não usa ShieldActionExtension e não usa ShieldConfigurationExtension.</p>
-        <p>A seleção de apps é tratada localmente no aparelho. KineCount não expõe nomes de apps, bundle IDs, domínios, nomes de categorias ou dados brutos de seleção em interface, logs, erros ou documentação.</p>
+  <!-- ═══════════════════════════════════════════════════════ DIVIDER -->
+  <hr class="section-divider">
 
-        <h3>6. Compartilhamento de dados</h3>
-        <p>KineCount não vende dados pessoais.</p>
-        <p>KineCount não compartilha dados pessoais com anunciantes, redes de anúncios, provedores de analytics, data brokers ou terceiros para rastreamento.</p>
-        <p>Como o aplicativo não possui backend, conta, cloud sync, analytics ou publicidade, o desenvolvedor não recebe dados pessoais de uso do app.</p>
+  <!-- ══════════════════════════════════════════════════════ PORTUGUÊS -->
+  <span class="lang-anchor" id="portugues"></span>
+  <h1>Pol&iacute;tica de Privacidade do KineCount</h1>
+  <p class="last-updated"><strong>&Uacute;ltima atualiza&ccedil;&atilde;o:</strong> 1&ordm; de junho de 2026</p>
 
-        <h3>7. Retenção e exclusão</h3>
-        <p>Os dados locais permanecem no aparelho enquanto o aplicativo estiver instalado ou até que sejam apagados pelo usuário, conforme os recursos disponíveis no app ou nas configurações do iOS.</p>
-        <p>O usuário pode excluir os dados locais removendo o aplicativo do aparelho.</p>
-        <p>Como o KineCount não possui conta, backend ou sincronização em nuvem, o desenvolvedor não mantém uma cópia remota dos dados do usuário.</p>
+  <p>Esta Pol&iacute;tica de Privacidade explica como o KineCount trata informa&ccedil;&otilde;es quando voc&ecirc; usa o aplicativo.</p>
 
-        <h3>8. Revogação de permissões</h3>
-        <p>O usuário pode revogar permissões do KineCount a qualquer momento nas configurações do iOS, incluindo:</p>
-        <ul>
-          <li>acesso à câmera;</li>
-          <li>acesso ao Tempo de Uso, quando aplicável.</li>
-        </ul>
-        <p>A revogação de permissões pode limitar ou impedir o funcionamento de recursos que dependem dessas permissões.</p>
+  <h3>1. Vis&atilde;o geral</h3>
+  <p>
+    KineCount &eacute; um aplicativo informacional para iPhone que ajuda o usu&aacute;rio a contar agachamentos, flex&otilde;es, abdominais e tempo v&aacute;lido de prancha usando a c&acirc;mera do aparelho.
+  </p>
+  <p>
+    KineCount foi desenvolvido com uma abordagem local-first e de privacidade por padr&atilde;o. Os recursos principais funcionam completamente sem conta. Sincroniza&ccedil;&atilde;o em nuvem e placar online s&atilde;o recursos opcionais de adesão explícita que exigem Login com Apple.
+  </p>
 
-        <h3>9. Crianças</h3>
-        <p>KineCount não é direcionado especificamente a crianças e não coleta conscientemente dados pessoais de crianças.</p>
+  <h3>2. Dados coletados</h3>
+  <p><strong>Sem recursos opcionais (padr&atilde;o):</strong> KineCount n&atilde;o coleta dados pessoais do usu&aacute;rio para servidores externos. Todos os dados ficam no aparelho.</p>
+  <p><strong>Com sincroniza&ccedil;&atilde;o em nuvem e/ou placar habilitados (adesão voluntária):</strong> os dados a seguir podem ser transmitidos para a infraestrutura segura do desenvolvedor:</p>
+  <ul>
+    <li>Dados de sess&atilde;o de treino (tipo de exerc&iacute;cio, repeti&ccedil;&otilde;es, dura&ccedil;&atilde;o, calorias estimadas, timestamps).</li>
+    <li>Dados de perfil (idade, sexo, altura, peso). Percentual de gordura corporal &eacute; opcional, pode ser apagado pelo usu&aacute;rio, nunca &eacute; p&uacute;blico e nunca aparece no placar.</li>
+    <li>Eventos de ledger de minutos (minutos cobrados/reembolsados de forma opaca e timestamps &mdash; nunca cont&eacute;m nomes de apps, bundle IDs ou dados de Tempo de Uso).</li>
+    <li>Progresso no 5 Star Road e estado do Desafio 30 Dias.</li>
+    <li>Apelido p&uacute;blico e pontua&ccedil;&atilde;o no placar (push-ups semanais, 5 Star Road) &mdash; somente para o placar.</li>
+    <li>Identificador de usu&aacute;rio do Supabase Auth (uso interno, nunca exibido na interface) &mdash; somente para placar e/ou sincroniza&ccedil;&atilde;o em nuvem.</li>
+  </ul>
 
-        <h3>10. Saúde, exercício e limitações</h3>
-        <p>KineCount é apenas informativo.</p>
-        <p>Contagens, tempo válido e calorias estimadas são estimativas baseadas na câmera e podem ser imperfeitas. Iluminação, enquadramento, posição do corpo, roupa e posicionamento do iPhone podem afetar os resultados.</p>
-        <p>KineCount não oferece aconselhamento médico, prevenção de lesão, diagnóstico, fisioterapia, reabilitação, correção de forma, coaching, pontuação, análise clínica, análise biomecânica ou orientação de tratamento.</p>
+  <h3>3. Dados que N&Atilde;O s&atilde;o coletados (em nenhuma configura&ccedil;&atilde;o)</h3>
+  <ul>
+    <li>Frames de c&acirc;mera, imagens, v&iacute;deos ou marcos de pose &mdash; processados no aparelho, descartados imediatamente, nunca armazenados ou transmitidos.</li>
+    <li>Endere&ccedil;o de e-mail ou nome real.</li>
+    <li>N&uacute;mero de telefone, endere&ccedil;o postal ou localiza&ccedil;&atilde;o.</li>
+    <li>Identificadores de dispositivo ou publicidade.</li>
+    <li>Dados do Apple Health.</li>
+    <li>Nomes de apps, bundle IDs, dom&iacute;nios ou dados de Tempo de Uso.</li>
+    <li>Token FamilyActivitySelection &mdash; armazenado apenas localmente no aparelho, nunca transmitido.</li>
+  </ul>
 
-        <h3>11. Alterações nesta política</h3>
-        <p>Esta Política de Privacidade pode ser atualizada ocasionalmente. A versão mais recente ficará disponível nesta página.</p>
+  <h3>4. Dados armazenados localmente no aparelho</h3>
+  <p>KineCount pode armazenar localmente no seu iPhone as seguintes informa&ccedil;&otilde;es:</p>
+  <ul>
+    <li>Sess&otilde;es de treino, contagens de repeti&ccedil;&otilde;es, tempo v&aacute;lido de prancha, calorias estimadas.</li>
+    <li>Hist&oacute;rico local de treinos, metas, sequ&ecirc;ncias e totais acumulados.</li>
+    <li>Minutos ganhos e saldo local de minutos dispon&iacute;veis.</li>
+    <li>Prefer&ecirc;ncias do aplicativo.</li>
+    <li>Sele&ccedil;&atilde;o de apps para Limites de apps (token opaco &mdash; nomes e bundle IDs de apps nunca s&atilde;o acess&iacute;veis ao KineCount).</li>
+  </ul>
+  <p>Os dados locais ficam no aparelho do usu&aacute;rio. Se a sincroniza&ccedil;&atilde;o em nuvem n&atilde;o estiver habilitada, esses dados nunca s&atilde;o enviados ao desenvolvedor.</p>
 
-        <h3>12. Contato</h3>
-        <p>Para dúvidas sobre esta Política de Privacidade ou sobre o KineCount, entre em contato:</p>
-        <p>E-mail: camcaep@gmail.com<br>Desenvolvedor: Camca AI</p>
-      </section>
-    </article>
-    <footer>&copy; 2026 Camca AI. All rights reserved.</footer>
-  </main>
+  <h3>5. C&acirc;mera e processamento no aparelho</h3>
+  <p>KineCount usa a c&acirc;mera do iPhone para contar exerc&iacute;cios compat&iacute;veis.</p>
+  <p>O processamento da c&acirc;mera ocorre inteiramente no pr&oacute;prio aparelho. KineCount n&atilde;o envia imagens, v&iacute;deos, frames de c&acirc;mera ou marcos de pose para servidores externos.</p>
+  <p>A permiss&atilde;o de c&acirc;mera &eacute; usada apenas para permitir o funcionamento das sess&otilde;es de treino baseadas em c&acirc;mera.</p>
+
+  <h3>6. Limites de apps e acesso ao Tempo de Uso</h3>
+  <p>KineCount pode solicitar acesso ao Tempo de Uso para permitir que o usu&aacute;rio selecione apps e use o recurso opcional Limites de apps.</p>
+  <p>Esse recurso permite que o usu&aacute;rio escolha apps espec&iacute;ficos, ganhe minutos ao completar sess&otilde;es de treino e use esses minutos para liberar temporariamente os apps selecionados.</p>
+  <p>KineCount n&atilde;o l&ecirc; dados de uso de apps. KineCount n&atilde;o sabe quais apps o usu&aacute;rio realmente abriu, quando abriu ou por quanto tempo usou.</p>
+  <p>KineCount n&atilde;o usa o entitlement App and Website Usage, n&atilde;o usa DeviceActivityEvent, n&atilde;o usa ShieldActionExtension e n&atilde;o usa ShieldConfigurationExtension.</p>
+  <p>A sele&ccedil;&atilde;o de apps &eacute; tratada e armazenada localmente no aparelho. KineCount n&atilde;o exp&otilde;e nomes de apps, bundle IDs, dom&iacute;nios, nomes de categorias ou dados brutos de sele&ccedil;&atilde;o em interface, logs, erros ou documenta&ccedil;&atilde;o. O token de sele&ccedil;&atilde;o nunca &eacute; transmitido ao desenvolvedor.</p>
+
+  <h3>7. Sincroniza&ccedil;&atilde;o em nuvem opcional</h3>
+  <p>Quando o usu&aacute;rio habilita a sincroniza&ccedil;&atilde;o em nuvem via Login com Apple, os dados de treino s&atilde;o sincronizados com a conta pr&oacute;pria do usu&aacute;rio na infraestrutura do desenvolvedor. Os dados s&atilde;o protegidos por seguran&ccedil;a em n&iacute;vel de linha &mdash; cada usu&aacute;rio s&oacute; pode acessar os pr&oacute;prios dados.</p>
+  <p><strong>O que &Eacute; sincronizado:</strong> hist&oacute;rico de treinos, perfil, eventos de ledger de minutos (somente minutos opacos), progresso no 5 Star Road e estado do Desafio 30 Dias.</p>
+  <p><strong>O que NUNCA &eacute; sincronizado:</strong> frames de c&acirc;mera, marcos de pose, token FamilyActivitySelection, dados de Tempo de Uso, nomes ou bundle IDs de apps, dados do Apple Health.</p>
+
+  <h3>8. Placar online opcional</h3>
+  <p>O placar &eacute; inteiramente opcional e de adesão voluntária. Usa Login com Apple com zero escopos &mdash; nenhum endere&ccedil;o de e-mail ou nome real &eacute; solicitado ou acessado.</p>
+  <p>O usu&aacute;rio escolhe um apelido p&uacute;blico. Apenas o apelido p&uacute;blico e a pontua&ccedil;&atilde;o agregada (push-ups semanais, 5 Star Road) s&atilde;o vis&iacute;veis para outros usu&aacute;rios.</p>
+  <p>Nenhuma m&eacute;trica corporal, dado de c&acirc;mera, dado de Tempo de Uso ou identificador de dispositivo aparece no placar.</p>
+
+  <h3>9. Cria&ccedil;&atilde;o e exclus&atilde;o de conta</h3>
+  <p>As contas s&atilde;o criadas quando o usu&aacute;rio realiza o Login com Apple para habilitar sincroniza&ccedil;&atilde;o em nuvem e/ou o placar.</p>
+  <p>A exclus&atilde;o de conta no aplicativo est&aacute; dispon&iacute;vel em <strong>Perfil &rarr; Conta &rarr; Excluir conta</strong>. A exclus&atilde;o &eacute; imediata e em cascata &mdash; todos os dados vinculados &agrave; conta no servidor s&atilde;o exclu&iacute;dos, incluindo sess&otilde;es arquivadas, sem exce&ccedil;&otilde;es. &Eacute; feita a revoga&ccedil;&atilde;o do token Apple na medida do poss&iacute;vel. Os dados locais s&atilde;o apagados imediatamente.</p>
+  <p>O usu&aacute;rio tamb&eacute;m pode revogar o acesso ao Login com Apple a qualquer momento em Ajustes do iOS &rarr; Apple ID &rarr; Senha e Seguran&ccedil;a &rarr; Apps que usam o Apple ID.</p>
+
+  <h3>10. Compartilhamento de dados</h3>
+  <p>KineCount n&atilde;o vende dados pessoais.</p>
+  <p>KineCount n&atilde;o compartilha dados pessoais com anunciantes, redes de an&uacute;ncios, provedores de analytics, data brokers ou terceiros para rastreamento.</p>
+  <p>Os dados sincronizados com a infraestrutura do desenvolvedor s&atilde;o os pr&oacute;prios dados do usu&aacute;rio, protegidos por seguran&ccedil;a em n&iacute;vel de linha e utilizados exclusivamente para fornecer os recursos de sincroniza&ccedil;&atilde;o em nuvem e placar.</p>
+
+  <h3>11. Reten&ccedil;&atilde;o de dados</h3>
+  <p><strong>Dados locais:</strong> permanecem no aparelho at&eacute; que o aplicativo seja exclu&iacute;do ou os dados sejam apagados pelo usu&aacute;rio.</p>
+  <p><strong>Dados em nuvem &mdash; sess&otilde;es de treino:</strong> sujeitos a uma pol&iacute;tica de arquivo de 24 meses (movidos para uma tabela de arquivo ap&oacute;s 24 meses; n&atilde;o exclu&iacute;dos permanentemente at&eacute; a exclus&atilde;o da conta).</p>
+  <p><strong>Demais tabelas em nuvem:</strong> sem limite autom&aacute;tico de reten&ccedil;&atilde;o atualmente. Os dados s&atilde;o mantidos at&eacute; a exclus&atilde;o da conta.</p>
+  <p><strong>Exclus&atilde;o de conta:</strong> remove imediata e permanentemente todos os dados vinculados &agrave; conta no servidor, incluindo a tabela de arquivo, sem exce&ccedil;&otilde;es.</p>
+
+  <h3>12. Revoga&ccedil;&atilde;o de permiss&otilde;es</h3>
+  <p>O usu&aacute;rio pode revogar permiss&otilde;es do KineCount a qualquer momento nas configura&ccedil;&otilde;es do iOS, incluindo:</p>
+  <ul>
+    <li>Acesso &agrave; c&acirc;mera.</li>
+    <li>Acesso ao Tempo de Uso, quando aplic&aacute;vel.</li>
+  </ul>
+  <p>A revoga&ccedil;&atilde;o de permiss&otilde;es pode limitar ou impedir o funcionamento de recursos que dependem dessas permiss&otilde;es.</p>
+
+  <h3>13. Crian&ccedil;as</h3>
+  <p>KineCount n&atilde;o &eacute; direcionado especificamente a crian&ccedil;as e n&atilde;o coleta conscientemente dados pessoais de crian&ccedil;as.</p>
+
+  <h3>14. Sa&uacute;de, exerc&iacute;cio e limita&ccedil;&otilde;es</h3>
+  <p>KineCount &eacute; apenas informativo.</p>
+  <p>Contagens, tempo v&aacute;lido e calorias estimadas s&atilde;o estimativas baseadas na c&acirc;mera e podem ser imperfeitas. Ilumina&ccedil;&atilde;o, enquadramento, posi&ccedil;&atilde;o do corpo, roupa e posicionamento do iPhone podem afetar os resultados.</p>
+  <p>KineCount n&atilde;o oferece aconselhamento m&eacute;dico, preven&ccedil;&atilde;o de les&atilde;o, diagn&oacute;stico, fisioterapia, reabilita&ccedil;&atilde;o, corre&ccedil;&atilde;o de forma, coaching, pontua&ccedil;&atilde;o, an&aacute;lise cl&iacute;nica, an&aacute;lise biomec&acirc;nica ou orienta&ccedil;&atilde;o de tratamento.</p>
+
+  <h3>15. Altera&ccedil;&otilde;es nesta pol&iacute;tica</h3>
+  <p>Esta Pol&iacute;tica de Privacidade pode ser atualizada ocasionalmente. A vers&atilde;o mais recente ficar&aacute; dispon&iacute;vel nesta p&aacute;gina.</p>
+
+  <h3>16. Contato</h3>
+  <p>
+    Para d&uacute;vidas sobre esta Pol&iacute;tica de Privacidade ou sobre o KineCount, entre em contato:<br>
+    E-mail: <a href="mailto:support@camca-ai.com">support@camca-ai.com</a><br>
+    Desenvolvedor: Camca AI
+  </p>
+
+  <footer>
+    &copy; 2026 Camca AI. All rights reserved.
+  </footer>
+
+</div>
 </body>
 </html>
