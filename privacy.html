@@ -92,7 +92,7 @@
   <!-- ═══════════════════════════════════════════════════════ ENGLISH -->
   <span class="lang-anchor" id="english"></span>
   <h1>KineCount Privacy Policy</h1>
-  <p class="last-updated"><strong>Last updated:</strong> June 1, 2026</p>
+  <p class="last-updated"><strong>Last updated:</strong> June 13, 2026</p>
 
   <p>This Privacy Policy explains how KineCount handles information when you use the app.</p>
 
@@ -115,6 +115,7 @@
     <li>Public nickname and leaderboard score (weekly Push-ups, 5 Star Road) &mdash; leaderboard only.</li>
     <li>Supabase Auth user identifier (internal only, never shown in the UI) &mdash; leaderboard and/or cloud sync only.</li>
   </ul>
+  <p>With optional Adaptive Weekly Plan generation enabled (opt-in, requires account and cloud sync): workout history aggregates, profile data, questionnaire answers, and AMRAP assessment results may be forwarded to Anthropic for plan generation. See &sect;9 for full details.</p>
 
   <h3>3. Data NOT Collected (in any configuration)</h3>
   <ul>
@@ -160,23 +161,41 @@
   <p>The user chooses a public nickname. Only the public nickname and aggregate score (weekly Push-ups, 5 Star Road) are visible to other users.</p>
   <p>No body metrics, no camera data, no Screen Time data, and no device identifiers are ever on the leaderboard.</p>
 
-  <h3>9. Account Creation and Deletion</h3>
+  <h3>9. Adaptive Weekly Plan</h3>
+  <p>The Adaptive Weekly Plan is an optional, account-gated feature that generates a personalised 7-day bodyweight training suggestion from the user&rsquo;s workout history and a short questionnaire. It requires Sign in with Apple and at least 7 days of synced workout history.</p>
+  <p><strong>What is sent to Anthropic.</strong> When the user taps Generate, KineCount&rsquo;s backend reads the following data from the user&rsquo;s Supabase account and forwards it to the Anthropic API (api.anthropic.com) to produce a structured plan:</p>
+  <ul>
+    <li>Age, sex, height, and weight (from the user&rsquo;s profile).</li>
+    <li>Body fat percentage, if set by the user (optional).</li>
+    <li>Daily workout totals for the last 14 days (aggregate counts only &mdash; no raw session data, no session IDs, no sub-day timestamps).</li>
+    <li>Answers to a short questionnaire (5 closed-choice fields: fitness goal, limitations, available daily time, other sports, and recovery level).</li>
+    <li>AMRAP capacity assessment results (4 numbers), when applicable.</li>
+  </ul>
+  <p>No user identifier (UUID, email, or real name) is included in the data sent to Anthropic.</p>
+  <p><strong>Anthropic as a sub-processor.</strong> Data forwarded for plan generation transits Anthropic&rsquo;s infrastructure, distinct from KineCount&rsquo;s primary data infrastructure (Supabase, sa-east-1, Brazil). Under Anthropic&rsquo;s Commercial Terms of Service (<a href="https://www.anthropic.com/legal/commercial-terms">https://www.anthropic.com/legal/commercial-terms</a>) applicable to API usage, Anthropic may not train its models on customer data submitted through the API. The developer will reverify this commitment if Anthropic&rsquo;s terms change before any further public rollout of this feature.</p>
+  <p><strong>What is stored.</strong> A snapshot of the generation input (daily aggregates, questionnaire, assessment) and the generated plan are stored server-side in the user&rsquo;s account under row-level security (self-only access). The snapshot contains only the same aggregate data listed above &mdash; no raw sessions, no free text, no camera data.</p>
+  <p><strong>Device privacy.</strong> Profile and history data are read server-side from Supabase by the backend. The device does not transmit this data directly to Anthropic.</p>
+  <p><strong>Generation is always user-initiated.</strong> There are no background calls to Anthropic. Data is forwarded only when the user explicitly taps Generate.</p>
+  <p>This feature is off by default. No data is forwarded to Anthropic unless the feature is enabled and the user actively initiates generation.</p>
+
+  <h3>10. Account Creation and Deletion</h3>
   <p>Accounts are created when the user signs in with Apple to enable cloud sync and/or the leaderboard.</p>
   <p>In-app account deletion is available at <strong>Profile &rarr; Account &rarr; Delete account</strong>. Deletion is immediate and cascading &mdash; all server-side data linked to the account is deleted, including archived workout sessions, with no exceptions. Best-effort Apple token revocation is performed. Local data is cleared immediately.</p>
   <p>Users can also revoke Sign in with Apple access at any time in iOS Settings &rarr; Apple ID &rarr; Password &amp; Security &rarr; Apps Using Apple ID.</p>
 
-  <h3>10. Data Sharing</h3>
+  <h3>11. Data Sharing</h3>
   <p>KineCount does not sell personal data.</p>
   <p>KineCount does not share personal data with advertisers, ad networks, analytics providers, data brokers, or third parties for tracking purposes.</p>
   <p>Data synced to the developer&rsquo;s infrastructure is the user&rsquo;s own data, protected by row-level security and used solely to provide the cloud sync and leaderboard features.</p>
+  <p>KineCount uses Anthropic as a sub-processor solely for Adaptive Weekly Plan generation. Data forwarded to Anthropic is limited to the aggregate workout and profile fields described in &sect;9 and is governed by Anthropic&rsquo;s Commercial Terms of Service. No data is shared with Anthropic unless the feature is enabled and the user initiates generation.</p>
 
-  <h3>11. Data Retention</h3>
+  <h3>12. Data Retention</h3>
   <p><strong>Local data:</strong> stays on the device until the app is deleted or the user clears it.</p>
   <p><strong>Cloud data &mdash; workout sessions:</strong> subject to a 24-month archive policy (moved to an archive table after 24 months; not hard-deleted until account deletion).</p>
   <p><strong>All other cloud tables:</strong> no automatic retention limit currently. Data is retained until account deletion.</p>
   <p><strong>Account deletion:</strong> immediately and permanently removes all server-side data linked to the account, including the archive table, with no exceptions.</p>
 
-  <h3>12. Revoking Permissions</h3>
+  <h3>13. Revoking Permissions</h3>
   <p>Users can revoke KineCount permissions at any time in iOS Settings, including:</p>
   <ul>
     <li>Camera access.</li>
@@ -184,18 +203,18 @@
   </ul>
   <p>Revoking permissions may limit or prevent features that depend on those permissions from working.</p>
 
-  <h3>13. Children</h3>
+  <h3>14. Children</h3>
   <p>KineCount is not specifically directed to children and does not knowingly collect personal data from children.</p>
 
-  <h3>14. Health, Exercise, and Limitations</h3>
+  <h3>15. Health, Exercise, and Limitations</h3>
   <p>KineCount is informational only.</p>
   <p>Counts, valid hold time, and estimated calories are camera-based estimates and may be imperfect. Lighting, framing, body position, clothing, and iPhone placement may affect results.</p>
   <p>KineCount does not provide medical advice, injury prevention, diagnosis, physiotherapy, rehabilitation, form correction, coaching, scoring, clinical analysis, biomechanical analysis, or treatment guidance.</p>
 
-  <h3>15. Changes to This Policy</h3>
+  <h3>16. Changes to This Policy</h3>
   <p>This Privacy Policy may be updated from time to time. The latest version will be made available on this page.</p>
 
-  <h3>16. Contact</h3>
+  <h3>17. Contact</h3>
   <p>
     For questions about this Privacy Policy or KineCount, contact:<br>
     Email: <a href="mailto:support@camca-ai.com">support@camca-ai.com</a><br>
@@ -208,7 +227,7 @@
   <!-- ══════════════════════════════════════════════════════ PORTUGUÊS -->
   <span class="lang-anchor" id="portugues"></span>
   <h1>Pol&iacute;tica de Privacidade do KineCount</h1>
-  <p class="last-updated"><strong>&Uacute;ltima atualiza&ccedil;&atilde;o:</strong> 1&ordm; de junho de 2026</p>
+  <p class="last-updated"><strong>&Uacute;ltima atualiza&ccedil;&atilde;o:</strong> 13 de junho de 2026</p>
 
   <p>Esta Pol&iacute;tica de Privacidade explica como o KineCount trata informa&ccedil;&otilde;es quando voc&ecirc; usa o aplicativo.</p>
 
@@ -231,6 +250,7 @@
     <li>Apelido p&uacute;blico e pontua&ccedil;&atilde;o no placar (push-ups semanais, 5 Star Road) &mdash; somente para o placar.</li>
     <li>Identificador de usu&aacute;rio do Supabase Auth (uso interno, nunca exibido na interface) &mdash; somente para placar e/ou sincroniza&ccedil;&atilde;o em nuvem.</li>
   </ul>
+  <p>Com gera&ccedil;&atilde;o de Plano Semanal Adaptativo habilitada (ades&atilde;o volunt&aacute;ria, requer conta e sincroniza&ccedil;&atilde;o em nuvem): agregados de hist&oacute;rico de treino, dados de perfil, respostas ao question&aacute;rio e resultados de avalia&ccedil;&atilde;o de capacidade m&aacute;xima podem ser encaminhados &agrave; Anthropic para a gera&ccedil;&atilde;o do plano. Veja a &sect;9 para detalhes completos.</p>
 
   <h3>3. Dados que N&Atilde;O s&atilde;o coletados (em nenhuma configura&ccedil;&atilde;o)</h3>
   <ul>
@@ -276,23 +296,41 @@
   <p>O usu&aacute;rio escolhe um apelido p&uacute;blico. Apenas o apelido p&uacute;blico e a pontua&ccedil;&atilde;o agregada (push-ups semanais, 5 Star Road) s&atilde;o vis&iacute;veis para outros usu&aacute;rios.</p>
   <p>Nenhuma m&eacute;trica corporal, dado de c&acirc;mera, dado de Tempo de Uso ou identificador de dispositivo aparece no placar.</p>
 
-  <h3>9. Cria&ccedil;&atilde;o e exclus&atilde;o de conta</h3>
+  <h3>9. Plano Semanal Adaptativo</h3>
+  <p>O Plano Semanal Adaptativo &eacute; um recurso opcional e vinculado a conta que gera uma sugest&atilde;o personalizada de treino de 7 dias com base no hist&oacute;rico de treinos do usu&aacute;rio e em um question&aacute;rio curto. Requer Login com Apple e pelo menos 7 dias de hist&oacute;rico de treinos sincronizado.</p>
+  <p><strong>O que &eacute; enviado &agrave; Anthropic.</strong> Quando o usu&aacute;rio toca em Gerar, o backend do KineCount l&ecirc; os dados a seguir da conta do usu&aacute;rio no Supabase e os encaminha para a API da Anthropic (api.anthropic.com) para gerar um plano estruturado:</p>
+  <ul>
+    <li>Idade, sexo, altura e peso (do perfil do usu&aacute;rio).</li>
+    <li>Percentual de gordura corporal, se definido pelo usu&aacute;rio (opcional).</li>
+    <li>Totais di&aacute;rios de treino dos &uacute;ltimos 14 dias (somente contagens agregadas &mdash; sem dados de sess&atilde;o brutos, sem IDs de sess&atilde;o, sem timestamps intradi&aacute;rios).</li>
+    <li>Respostas a um question&aacute;rio curto (5 campos de escolha fechada: objetivo, limita&ccedil;&otilde;es, tempo di&aacute;rio dispon&iacute;vel, outros esportes e n&iacute;vel de recupera&ccedil;&atilde;o).</li>
+    <li>Resultados de avalia&ccedil;&atilde;o de capacidade m&aacute;xima (4 n&uacute;meros), quando aplic&aacute;vel.</li>
+  </ul>
+  <p>Nenhum identificador de usu&aacute;rio (UUID, e-mail ou nome real) &eacute; inclu&iacute;do nos dados enviados &agrave; Anthropic.</p>
+  <p><strong>Anthropic como subprocessador.</strong> Os dados encaminhados para a gera&ccedil;&atilde;o do plano transitam pela infraestrutura da Anthropic, distinta da infraestrutura principal do KineCount (Supabase, sa-east-1, Brasil). Nos termos dos Commercial Terms of Service (<a href="https://www.anthropic.com/legal/commercial-terms">https://www.anthropic.com/legal/commercial-terms</a>) da Anthropic aplic&aacute;veis ao uso da API, a Anthropic n&atilde;o pode treinar seus modelos com dados de clientes submetidos via API. O desenvolvedor verificar&aacute; novamente esse compromisso caso os termos da Anthropic sejam alterados antes de qualquer disponibiliza&ccedil;&atilde;o p&uacute;blica adicional desse recurso.</p>
+  <p><strong>O que &eacute; armazenado.</strong> Um snapshot dos dados de entrada da gera&ccedil;&atilde;o (agregados di&aacute;rios, question&aacute;rio e avalia&ccedil;&atilde;o) e o plano gerado s&atilde;o armazenados no servidor na conta do usu&aacute;rio com acesso restrito ao pr&oacute;prio usu&aacute;rio via seguran&ccedil;a em n&iacute;vel de linha (RLS). O snapshot cont&eacute;m apenas os mesmos dados agregados listados acima &mdash; sem sess&otilde;es brutas, sem texto livre, sem dados de c&acirc;mera.</p>
+  <p><strong>Privacidade no aparelho.</strong> Os dados de perfil e hist&oacute;rico s&atilde;o lidos pelo backend diretamente do Supabase. O aparelho n&atilde;o transmite esses dados diretamente &agrave; Anthropic.</p>
+  <p><strong>A gera&ccedil;&atilde;o &eacute; sempre iniciada pelo usu&aacute;rio.</strong> N&atilde;o h&aacute; chamadas em segundo plano &agrave; Anthropic. Os dados s&oacute; s&atilde;o encaminhados quando o usu&aacute;rio toca explicitamente em Gerar.</p>
+  <p>Este recurso est&aacute; desativado por padr&atilde;o. Nenhum dado &eacute; encaminhado &agrave; Anthropic a menos que o recurso esteja habilitado e o usu&aacute;rio inicie ativamente a gera&ccedil;&atilde;o.</p>
+
+  <h3>10. Cria&ccedil;&atilde;o e exclus&atilde;o de conta</h3>
   <p>As contas s&atilde;o criadas quando o usu&aacute;rio realiza o Login com Apple para habilitar sincroniza&ccedil;&atilde;o em nuvem e/ou o placar.</p>
   <p>A exclus&atilde;o de conta no aplicativo est&aacute; dispon&iacute;vel em <strong>Perfil &rarr; Conta &rarr; Excluir conta</strong>. A exclus&atilde;o &eacute; imediata e em cascata &mdash; todos os dados vinculados &agrave; conta no servidor s&atilde;o exclu&iacute;dos, incluindo sess&otilde;es arquivadas, sem exce&ccedil;&otilde;es. &Eacute; feita a revoga&ccedil;&atilde;o do token Apple na medida do poss&iacute;vel. Os dados locais s&atilde;o apagados imediatamente.</p>
   <p>O usu&aacute;rio tamb&eacute;m pode revogar o acesso ao Login com Apple a qualquer momento em Ajustes do iOS &rarr; Apple ID &rarr; Senha e Seguran&ccedil;a &rarr; Apps que usam o Apple ID.</p>
 
-  <h3>10. Compartilhamento de dados</h3>
+  <h3>11. Compartilhamento de dados</h3>
   <p>KineCount n&atilde;o vende dados pessoais.</p>
   <p>KineCount n&atilde;o compartilha dados pessoais com anunciantes, redes de an&uacute;ncios, provedores de analytics, data brokers ou terceiros para rastreamento.</p>
   <p>Os dados sincronizados com a infraestrutura do desenvolvedor s&atilde;o os pr&oacute;prios dados do usu&aacute;rio, protegidos por seguran&ccedil;a em n&iacute;vel de linha e utilizados exclusivamente para fornecer os recursos de sincroniza&ccedil;&atilde;o em nuvem e placar.</p>
+  <p>O KineCount usa a Anthropic como subprocessador exclusivamente para a gera&ccedil;&atilde;o do Plano Semanal Adaptativo. Os dados encaminhados &agrave; Anthropic s&atilde;o limitados aos campos agregados de treino e perfil descritos na &sect;9 e s&atilde;o regidos pelos Commercial Terms of Service da Anthropic. Nenhum dado &eacute; compartilhado com a Anthropic a menos que o recurso esteja habilitado e o usu&aacute;rio inicie a gera&ccedil;&atilde;o.</p>
 
-  <h3>11. Reten&ccedil;&atilde;o de dados</h3>
+  <h3>12. Reten&ccedil;&atilde;o de dados</h3>
   <p><strong>Dados locais:</strong> permanecem no aparelho at&eacute; que o aplicativo seja exclu&iacute;do ou os dados sejam apagados pelo usu&aacute;rio.</p>
   <p><strong>Dados em nuvem &mdash; sess&otilde;es de treino:</strong> sujeitos a uma pol&iacute;tica de arquivo de 24 meses (movidos para uma tabela de arquivo ap&oacute;s 24 meses; n&atilde;o exclu&iacute;dos permanentemente at&eacute; a exclus&atilde;o da conta).</p>
   <p><strong>Demais tabelas em nuvem:</strong> sem limite autom&aacute;tico de reten&ccedil;&atilde;o atualmente. Os dados s&atilde;o mantidos at&eacute; a exclus&atilde;o da conta.</p>
   <p><strong>Exclus&atilde;o de conta:</strong> remove imediata e permanentemente todos os dados vinculados &agrave; conta no servidor, incluindo a tabela de arquivo, sem exce&ccedil;&otilde;es.</p>
 
-  <h3>12. Revoga&ccedil;&atilde;o de permiss&otilde;es</h3>
+  <h3>13. Revoga&ccedil;&atilde;o de permiss&otilde;es</h3>
   <p>O usu&aacute;rio pode revogar permiss&otilde;es do KineCount a qualquer momento nas configura&ccedil;&otilde;es do iOS, incluindo:</p>
   <ul>
     <li>Acesso &agrave; c&acirc;mera.</li>
@@ -300,18 +338,18 @@
   </ul>
   <p>A revoga&ccedil;&atilde;o de permiss&otilde;es pode limitar ou impedir o funcionamento de recursos que dependem dessas permiss&otilde;es.</p>
 
-  <h3>13. Crian&ccedil;as</h3>
+  <h3>14. Crian&ccedil;as</h3>
   <p>KineCount n&atilde;o &eacute; direcionado especificamente a crian&ccedil;as e n&atilde;o coleta conscientemente dados pessoais de crian&ccedil;as.</p>
 
-  <h3>14. Sa&uacute;de, exerc&iacute;cio e limita&ccedil;&otilde;es</h3>
+  <h3>15. Sa&uacute;de, exerc&iacute;cio e limita&ccedil;&otilde;es</h3>
   <p>KineCount &eacute; apenas informativo.</p>
   <p>Contagens, tempo v&aacute;lido e calorias estimadas s&atilde;o estimativas baseadas na c&acirc;mera e podem ser imperfeitas. Ilumina&ccedil;&atilde;o, enquadramento, posi&ccedil;&atilde;o do corpo, roupa e posicionamento do iPhone podem afetar os resultados.</p>
   <p>KineCount n&atilde;o oferece aconselhamento m&eacute;dico, preven&ccedil;&atilde;o de les&atilde;o, diagn&oacute;stico, fisioterapia, reabilita&ccedil;&atilde;o, corre&ccedil;&atilde;o de forma, coaching, pontua&ccedil;&atilde;o, an&aacute;lise cl&iacute;nica, an&aacute;lise biomec&acirc;nica ou orienta&ccedil;&atilde;o de tratamento.</p>
 
-  <h3>15. Altera&ccedil;&otilde;es nesta pol&iacute;tica</h3>
+  <h3>16. Altera&ccedil;&otilde;es nesta pol&iacute;tica</h3>
   <p>Esta Pol&iacute;tica de Privacidade pode ser atualizada ocasionalmente. A vers&atilde;o mais recente ficar&aacute; dispon&iacute;vel nesta p&aacute;gina.</p>
 
-  <h3>16. Contato</h3>
+  <h3>17. Contato</h3>
   <p>
     Para d&uacute;vidas sobre esta Pol&iacute;tica de Privacidade ou sobre o KineCount, entre em contato:<br>
     E-mail: <a href="mailto:support@camca-ai.com">support@camca-ai.com</a><br>
