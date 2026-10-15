@@ -92,13 +92,13 @@
   <!-- ═══════════════════════════════════════════════════════ ENGLISH -->
   <span class="lang-anchor" id="english"></span>
   <h1>KineCount Privacy Policy</h1>
-  <p class="last-updated"><strong>Last updated:</strong> June 13, 2026</p>
+  <p class="last-updated"><strong>Last updated:</strong> October 15, 2026</p>
 
   <p>This Privacy Policy explains how KineCount handles information when you use the app.</p>
 
   <h3>1. Overview</h3>
   <p>
-    KineCount is an informational iPhone app that helps users count Squats, Push-ups, Sit-ups, and Plank valid hold time using the device camera.
+    KineCount is an informational iPhone app that helps users count Squats, Push-ups, Sit-ups, Pull-ups, and Plank valid hold time using the device camera.
   </p>
   <p>
     KineCount is designed with a local-first, privacy-by-default approach. Core features work entirely without an account. Optional cloud sync and an optional leaderboard are available as explicit opt-in features and require Sign in with Apple.
@@ -112,7 +112,9 @@
     <li>Profile data (age, sex, height, weight). Body fat percentage is optional, user-clearable, never public, and never included on the leaderboard.</li>
     <li>Spend-ledger events (opaque charged/refunded minutes and timestamps &mdash; never contains app names, bundle IDs, or Screen Time usage data).</li>
     <li>5 Star Road progress and 30-Day Challenge state.</li>
-    <li>Public nickname and leaderboard score (weekly Push-ups, 5 Star Road) &mdash; leaderboard only.</li>
+    <li>Spider 30 run identifier and qualifying challenge days (Spider 30 workouts sync like other workouts).</li>
+    <li>Which calorie model produced each stored estimated-calorie value (an internal model label, so the value reads correctly on any device).</li>
+    <li>Public nickname and leaderboard score (weekly Push-up, Squat, Sit-up and Pull-up reps, 5 Star Road) &mdash; leaderboard only.</li>
     <li>Supabase Auth user identifier (internal only, never shown in the UI) &mdash; leaderboard and/or cloud sync only.</li>
   </ul>
   <p>With optional Adaptive Weekly Plan generation enabled (opt-in, requires account and cloud sync): workout history aggregates, profile data, questionnaire answers, and AMRAP assessment results may be forwarded to Anthropic for plan generation. See &sect;9 for full details.</p>
@@ -123,7 +125,7 @@
     <li>Email address or real name.</li>
     <li>Phone number, postal address, or location data.</li>
     <li>Device or advertising identifiers.</li>
-    <li>Apple Health data.</li>
+    <li>Data read from Apple Health. KineCount never reads Apple Health (see section 5a for what it can write, if you allow it).</li>
     <li>App names, bundle IDs, domains, or Screen Time / usage data.</li>
     <li>FamilyActivitySelection token &mdash; stored locally on-device only, never transmitted.</li>
   </ul>
@@ -136,6 +138,7 @@
     <li>Earned minutes and local spendable minute balance.</li>
     <li>App preferences.</li>
     <li>App Limits selection (opaque token &mdash; app names and bundle IDs are never accessible to KineCount).</li>
+    <li>The Spider 30 challenge log and the Progress summaries computed from your own workouts.</li>
   </ul>
   <p>Local data stays on the user&rsquo;s device. If optional cloud sync is not enabled, it is never sent to the developer.</p>
 
@@ -143,6 +146,13 @@
   <p>KineCount uses the iPhone camera to count supported exercises.</p>
   <p>Camera processing runs entirely on-device. KineCount does not upload images, videos, camera frames, or pose landmarks to external servers.</p>
   <p>Camera permission is used only to enable camera-based workout sessions.</p>
+  <h3>5a. Apple Health (optional, write-only)</h3>
+  <p>If you allow it in the iOS Health permission sheet, KineCount saves your completed workouts to Apple Health: the activity type, the duration, and the estimated calories of each workout. KineCount only writes. It never reads anything from Apple Health, does not use Health data in the background, and does not send any Health data to its servers or include it in cloud sync. You can turn this off at any time in iOS Settings &rarr; Health &rarr; Data Access &amp; Devices &rarr; KineCount, and you can decline it without affecting the rest of the app.</p>
+
+  <h3>5b. Spider 30, Progress, and KineMotion</h3>
+  <p>Spider 30 is a circuit of 5 pull-ups, 10 push-ups, and 15 squats, repeated for up to 20 minutes. It uses the same on-device camera processing as every other exercise. Its 30-day challenge log is stored on your device. Spider workouts are saved like other workouts and, if you turn on cloud sync, sync with your other workout data, including a Spider run identifier and your qualifying challenge days.</p>
+  <p>Progress shows charts and totals from your own recorded workouts (by day, week, or month, with reps, workout time, and estimated calories). It is computed on your device. If you use cloud sync, Progress can also read your own already-synced workouts from your account to show history from before this device&rsquo;s local record, and keeps a cached copy on the device. No new data is collected for this.</p>
+  <p>KineMotion is a camera-controlled game. Camera frames and pose landmarks are processed on your device and discarded immediately, as for workouts. Nothing a KineMotion session produces (score, result, time, or count) is saved, synced, sent anywhere, or counted as a workout.</p>
 
   <h3>6. App Limits and Screen Time Access</h3>
   <p>KineCount may request Screen Time access to let the user select apps and use the optional App Limits feature.</p>
@@ -158,7 +168,7 @@
 
   <h3>8. Optional Leaderboard</h3>
   <p>The leaderboard is entirely opt-in. It uses Sign in with Apple with zero scopes &mdash; no email address or real name is requested or accessed.</p>
-  <p>The user chooses a public nickname. Only the public nickname and aggregate score (weekly Push-ups, 5 Star Road) are visible to other users.</p>
+  <p>The user chooses a public nickname. Only the public nickname and aggregate score (weekly Push-up, Squat, Sit-up and Pull-up reps, 5 Star Road) are visible to other users.</p>
   <p>No body metrics, no camera data, no Screen Time data, and no device identifiers are ever on the leaderboard.</p>
 
   <h3>9. Adaptive Weekly Plan</h3>
@@ -227,13 +237,13 @@
   <!-- ══════════════════════════════════════════════════════ PORTUGUÊS -->
   <span class="lang-anchor" id="portugues"></span>
   <h1>Pol&iacute;tica de Privacidade do KineCount</h1>
-  <p class="last-updated"><strong>&Uacute;ltima atualiza&ccedil;&atilde;o:</strong> 13 de junho de 2026</p>
+  <p class="last-updated"><strong>&Uacute;ltima atualiza&ccedil;&atilde;o:</strong> 15 de outubro de 2026</p>
 
   <p>Esta Pol&iacute;tica de Privacidade explica como o KineCount trata informa&ccedil;&otilde;es quando voc&ecirc; usa o aplicativo.</p>
 
   <h3>1. Vis&atilde;o geral</h3>
   <p>
-    KineCount &eacute; um aplicativo informacional para iPhone que ajuda o usu&aacute;rio a contar agachamentos, flex&otilde;es, abdominais e tempo v&aacute;lido de prancha usando a c&acirc;mera do aparelho.
+    KineCount &eacute; um aplicativo informacional para iPhone que ajuda o usu&aacute;rio a contar agachamentos, flex&otilde;es, abdominais, barras fixas e tempo v&aacute;lido de prancha usando a c&acirc;mera do aparelho.
   </p>
   <p>
     KineCount foi desenvolvido com uma abordagem local-first e de privacidade por padr&atilde;o. Os recursos principais funcionam completamente sem conta. Sincroniza&ccedil;&atilde;o em nuvem e placar online s&atilde;o recursos opcionais de adesão explícita que exigem Login com Apple.
@@ -247,7 +257,9 @@
     <li>Dados de perfil (idade, sexo, altura, peso). Percentual de gordura corporal &eacute; opcional, pode ser apagado pelo usu&aacute;rio, nunca &eacute; p&uacute;blico e nunca aparece no placar.</li>
     <li>Eventos de ledger de minutos (minutos cobrados/reembolsados de forma opaca e timestamps &mdash; nunca cont&eacute;m nomes de apps, bundle IDs ou dados de Tempo de Uso).</li>
     <li>Progresso no 5 Star Road e estado do Desafio 30 Dias.</li>
-    <li>Apelido p&uacute;blico e pontua&ccedil;&atilde;o no placar (push-ups semanais, 5 Star Road) &mdash; somente para o placar.</li>
+    <li>Identificador da rodada do Spider 30 e dias qualificados do desafio (os treinos do Spider 30 sincronizam como os demais treinos).</li>
+    <li>Qual modelo de calorias gerou cada valor de calorias estimadas armazenado (um r&oacute;tulo interno, para que o valor seja lido corretamente em qualquer aparelho).</li>
+    <li>Apelido p&uacute;blico e pontua&ccedil;&atilde;o no placar (repeti&ccedil;&otilde;es semanais de flex&atilde;o, agachamento, abdominal e barra fixa, 5 Star Road) &mdash; somente para o placar.</li>
     <li>Identificador de usu&aacute;rio do Supabase Auth (uso interno, nunca exibido na interface) &mdash; somente para placar e/ou sincroniza&ccedil;&atilde;o em nuvem.</li>
   </ul>
   <p>Com gera&ccedil;&atilde;o de Plano Semanal Adaptativo habilitada (ades&atilde;o volunt&aacute;ria, requer conta e sincroniza&ccedil;&atilde;o em nuvem): agregados de hist&oacute;rico de treino, dados de perfil, respostas ao question&aacute;rio e resultados de avalia&ccedil;&atilde;o de capacidade m&aacute;xima podem ser encaminhados &agrave; Anthropic para a gera&ccedil;&atilde;o do plano. Veja a &sect;9 para detalhes completos.</p>
@@ -258,7 +270,7 @@
     <li>Endere&ccedil;o de e-mail ou nome real.</li>
     <li>N&uacute;mero de telefone, endere&ccedil;o postal ou localiza&ccedil;&atilde;o.</li>
     <li>Identificadores de dispositivo ou publicidade.</li>
-    <li>Dados do Apple Health.</li>
+    <li>Dados lidos do Apple Health. O KineCount nunca l&ecirc; o Apple Health (veja a se&ccedil;&atilde;o 5a para o que ele pode gravar, se voc&ecirc; permitir).</li>
     <li>Nomes de apps, bundle IDs, dom&iacute;nios ou dados de Tempo de Uso.</li>
     <li>Token FamilyActivitySelection &mdash; armazenado apenas localmente no aparelho, nunca transmitido.</li>
   </ul>
@@ -271,6 +283,7 @@
     <li>Minutos ganhos e saldo local de minutos dispon&iacute;veis.</li>
     <li>Prefer&ecirc;ncias do aplicativo.</li>
     <li>Sele&ccedil;&atilde;o de apps para Limites de apps (token opaco &mdash; nomes e bundle IDs de apps nunca s&atilde;o acess&iacute;veis ao KineCount).</li>
+    <li>O registro do desafio Spider 30 e os resumos do Progresso calculados a partir dos seus pr&oacute;prios treinos.</li>
   </ul>
   <p>Os dados locais ficam no aparelho do usu&aacute;rio. Se a sincroniza&ccedil;&atilde;o em nuvem n&atilde;o estiver habilitada, esses dados nunca s&atilde;o enviados ao desenvolvedor.</p>
 
@@ -278,6 +291,13 @@
   <p>KineCount usa a c&acirc;mera do iPhone para contar exerc&iacute;cios compat&iacute;veis.</p>
   <p>O processamento da c&acirc;mera ocorre inteiramente no pr&oacute;prio aparelho. KineCount n&atilde;o envia imagens, v&iacute;deos, frames de c&acirc;mera ou marcos de pose para servidores externos.</p>
   <p>A permiss&atilde;o de c&acirc;mera &eacute; usada apenas para permitir o funcionamento das sess&otilde;es de treino baseadas em c&acirc;mera.</p>
+  <h3>5a. Apple Health (opcional, somente grava&ccedil;&atilde;o)</h3>
+  <p>Se voc&ecirc; permitir na tela de permiss&atilde;o de Sa&uacute;de do iOS, o KineCount salva seus treinos conclu&iacute;dos no Apple Health: o tipo de atividade, a dura&ccedil;&atilde;o e as calorias estimadas de cada treino. O KineCount apenas grava. Ele nunca l&ecirc; nada do Apple Health, n&atilde;o usa dados de Sa&uacute;de em segundo plano e n&atilde;o envia nenhum dado de Sa&uacute;de aos seus servidores nem o inclui na sincroniza&ccedil;&atilde;o em nuvem. Voc&ecirc; pode desativar isso a qualquer momento em Ajustes do iOS &rarr; Sa&uacute;de &rarr; Acesso a Dados e Dispositivos &rarr; KineCount, e pode recusar sem afetar o restante do app.</p>
+
+  <h3>5b. Spider 30, Progresso e KineMotion</h3>
+  <p>O Spider 30 &eacute; um circuito de 5 barras fixas, 10 flex&otilde;es e 15 agachamentos, repetido por at&eacute; 20 minutos. Ele usa o mesmo processamento de c&acirc;mera no aparelho que os demais exerc&iacute;cios. O registro do desafio de 30 dias fica guardado no seu aparelho. Os treinos do Spider s&atilde;o salvos como os outros treinos e, se voc&ecirc; ativar a sincroniza&ccedil;&atilde;o em nuvem, s&atilde;o sincronizados com seus outros dados de treino, incluindo um identificador da rodada do Spider e os seus dias qualificados do desafio.</p>
+  <p>O Progresso mostra gr&aacute;ficos e totais dos seus pr&oacute;prios treinos registrados (por dia, semana ou m&ecirc;s, com repeti&ccedil;&otilde;es, tempo de treino e calorias estimadas). Ele &eacute; calculado no seu aparelho. Se voc&ecirc; usa a sincroniza&ccedil;&atilde;o em nuvem, o Progresso tamb&eacute;m pode ler seus pr&oacute;prios treinos j&aacute; sincronizados na sua conta para mostrar o hist&oacute;rico anterior ao registro local deste aparelho, e mant&eacute;m uma c&oacute;pia em cache no aparelho. Nenhum dado novo &eacute; coletado para isso.</p>
+  <p>O KineMotion &eacute; um jogo controlado pela c&acirc;mera. Os quadros da c&acirc;mera e os pontos de pose s&atilde;o processados no seu aparelho e descartados imediatamente, como nos treinos. Nada que uma sess&atilde;o do KineMotion produz (pontua&ccedil;&atilde;o, resultado, tempo ou contagem) &eacute; salvo, sincronizado, enviado a qualquer lugar ou contado como treino.</p>
 
   <h3>6. Limites de apps e acesso ao Tempo de Uso</h3>
   <p>KineCount pode solicitar acesso ao Tempo de Uso para permitir que o usu&aacute;rio selecione apps e use o recurso opcional Limites de apps.</p>
@@ -293,7 +313,7 @@
 
   <h3>8. Placar online opcional</h3>
   <p>O placar &eacute; inteiramente opcional e de adesão voluntária. Usa Login com Apple com zero escopos &mdash; nenhum endere&ccedil;o de e-mail ou nome real &eacute; solicitado ou acessado.</p>
-  <p>O usu&aacute;rio escolhe um apelido p&uacute;blico. Apenas o apelido p&uacute;blico e a pontua&ccedil;&atilde;o agregada (push-ups semanais, 5 Star Road) s&atilde;o vis&iacute;veis para outros usu&aacute;rios.</p>
+  <p>O usu&aacute;rio escolhe um apelido p&uacute;blico. Apenas o apelido p&uacute;blico e a pontua&ccedil;&atilde;o agregada (repeti&ccedil;&otilde;es semanais de flex&atilde;o, agachamento, abdominal e barra fixa, 5 Star Road) s&atilde;o vis&iacute;veis para outros usu&aacute;rios.</p>
   <p>Nenhuma m&eacute;trica corporal, dado de c&acirc;mera, dado de Tempo de Uso ou identificador de dispositivo aparece no placar.</p>
 
   <h3>9. Plano Semanal Adaptativo</h3>
